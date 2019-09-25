@@ -14,7 +14,7 @@ function createMenuData(data) {
 	
 			//check to see if parent has already been added
 			if (parentcheck.includes(parent)) {
-				n += 1;
+				n+=1;
 			}
 			
 			//finds all children of parents
@@ -48,16 +48,24 @@ describe("menu Data Generator", () => {
         "parent1/parent1child3",
         "parent3",
         "parent3/parent3child1",
-        "parent4"
+		"parent4",
+		"parent1/parent1child4",
+        "parent1/parent1child5",
+        "parent5/parent5child",
+        "parent5/parent5child2",
+        "parent6/parent6child",
+		
       ];
   
       const expectedResult = [
         {
           title: "parent1",
-          data: ["parent1child", "parent1child2", "parent1child3"]
+		  data: ["parent1child", "parent1child2", "parent1child3", "parent1child4", "parent1child5"]
         },
         { title: "parent2", data: ["parent2child", "parent2child2"] },
-        { title: "parent3", data: ["parent3child1"] }
+		{ title: "parent3", data: ["parent3child1"] },
+		{ title: "parent5", data: ["parent5child", "parent5child2"] },
+		{ title: "parent6", data: ["parent6child"] }
       ];
   
       const actualResult = createMenuData(data);
