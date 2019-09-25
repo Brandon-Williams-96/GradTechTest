@@ -1,17 +1,17 @@
 function createMenuData(data) {
 	var i, j, parent = 'no',
 		child, n;
-	const parentcheck = [];
-  	const test = [];
+	const parentcheck = []
+	const test = []
 	for (i = 0; i < data.length; i++) {
 		n = 0;
 		temp = []
-		
+
 		//check to see if parent has a child
 		if (data[i].includes('/')) {
 			parentcheck.push(parent);
 			parent = data[i].substr(0, data[i].indexOf('/', 0));
-			
+	
 			//check to see if parent has already been added
 			if (parentcheck.includes(parent)) {
 				n += 1;
@@ -31,7 +31,6 @@ function createMenuData(data) {
 					title: parent,
 					data: temp
 				});
-				n = +1;
 			}
 		}
 	}
