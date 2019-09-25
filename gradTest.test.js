@@ -51,8 +51,8 @@ describe("menu Data Generator", () => {
 		"parent4",
 		"parent1/parent1child4",
         "parent1/parent1child5",
-        "parent5/parent5child",
-        "parent5/parent5child2",
+        "Bob/Tim",
+        "Bob/Henry",
         "parent6/parent6child",
 		
       ];
@@ -64,7 +64,7 @@ describe("menu Data Generator", () => {
         },
         { title: "parent2", data: ["parent2child", "parent2child2"] },
 		{ title: "parent3", data: ["parent3child1"] },
-		{ title: "parent5", data: ["parent5child", "parent5child2"] },
+		{ title: "Bob", data: ["Tim", "Henry"] },
 		{ title: "parent6", data: ["parent6child"] }
       ];
   
